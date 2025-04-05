@@ -5,11 +5,19 @@ import ReposList from "./components/ReposList";
 
 function App() {
   const [formularioEstaVisivel, setFormularioEstaVisivel] = useState(true);
+  const [nomeUsuario, setNomeUsuario] = useState('');
 
   return(
     <>
-    <Perfil nomeUsuario="Fabricio-luiz"/>
-    <ReposList />
+    <input tupe="text" onBlur={(e) => setNomeUsuario(e.target.value)} />
+
+    {nomeUsuario.length > 1 && (
+      <>
+        <Perfil nomeUsuario= {nomeUsuario}/>
+        <ReposList nomeUsuario= {nomeUsuario} />
+      </>
+    )}
+
     
     {/* {formularioEstaVisivel &&(
       <Formulario />

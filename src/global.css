@@ -4,3 +4,16 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
+
+.container{
+    max-width: 1600px; /* largura maxima do container*/
+    width: 100%; /* ocupa 100% da largura do container*/
+    margin: 0 auto; /* centralizar no container*/
+
+}
+
+:root {
+    --corPrincipal: #179bbd;
+    --corSecundaria: #111;
+    --corTerciaria: #0ea367;
+}
